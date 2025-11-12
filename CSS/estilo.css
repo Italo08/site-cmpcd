@@ -300,6 +300,16 @@ img {
     margin-bottom: 20px;
 }
 
+.apoio-doacao h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #2D9CDB;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
 .apoio-doacao p {
     font-size: 1.25em;
     color: #333333;
