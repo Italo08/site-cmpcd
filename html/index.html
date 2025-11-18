@@ -15,13 +15,6 @@
     </head>
 
     <body>
-        <div class="superinfo-bg">
-            <div class="superinfo">
-                <p>Seg / Sex - 08:00 às 17:00</p>
-                <a href="tel:+551436021777">+55 (14) 3602-1777</a>
-                <p> R. Paissandú, 444 - Centro, Jaú - SP</p>
-            </div>
-        </div>
         <header class="menu-bg">
             <div class="menu">
                 <div class="menu-logo">
@@ -30,11 +23,11 @@
                 </div>
                 <nav class="menu-nav">
                     <ul>
-                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#Home">Equipe</a></li>
                         <li><a href="#Quemsomos">Quem somos</a></li>
                         <li><a href="#Iniciativas">Iniciativas</a></li>
                         <li><a href="#Notícías">Notícías</a></li>
-                        <li class="item-apoie"><a href="#sejaumapoiador" class="btn-apoie">Seja um apoiador</a></li>
+                        <li class="item-apoie"><a href="#login" class="btn-apoie">Login</a></li>
                     </ul>
                 </nav>
             </div>
@@ -137,7 +130,22 @@
                 <div class="apoio-opcoes">
                     <div class="apoio-item">
                         <h3>💰 Doações via PIX</h3>
-                        <p>Chave PIX: <strong>cmdpdjau@sp.gov.br</strong></p>
+                        <form class="form-pix">
+                            <input type="text" placeholder="Seu nome"> 
+                            <input type="text" placeholder="Seu telefone"> 
+                            <button class="btn-pix">Fazer pix</button>
+                        </form>
+                    </div>
+
+                    <!--pix popup-->
+                    <div id="popup-pix" class="popup-overlay">
+                        <div class="popup-box">
+                            <h2>Chaves PIX</h2>
+                            <p><strong>Email:</strong>xxxxxxxxx@xxxx.xx</p>
+                            <p><strong>CPF:</strong>XXXXXXX</p>
+                            <p><strong>CNPJ:</strong>xxxxxxxx</p>
+                            <button id="close-popup" class="btn-pix">Fechar</button>
+                        </div>
                     </div>
 
                     <div class="apoio-item">
@@ -155,19 +163,33 @@
             </div>
         </section>
 
-        <section class="newsletter">
-            <div class="newsletter-info">
-                <h1>Newsletter</h1>
-                <p>Assine e fique por dentro das novidades e eventos.</p>
-            </div>
-            <form class="newsletter-form">
-                <input type="text" placeholder="Seu e-mail">
-                <button type="submit">Assinar</button>
-            </form>
-        </section>
-
         <footer class="footer">
             <p>Conselho municipal dos direitos da pessoa com Deficiência © todos os direitos reservados</p>
         </footer>
+
+
+
+        
+        <script>
+            const btnPix = document.querySelector(".btn-pix");
+            const popupPix = document.getElementById("popup-pix");
+            const closePopup = document.getElementById("close-popup");
+        
+            btnPix.addEventListener("click", function(event) {
+                event.preventDefault(); // impede enviar o form
+                popupPix.style.display = "flex";
+            });
+        
+            closePopup.addEventListener("click", function() {
+                popupPix.style.display = "none";
+            });
+        
+            // fecha ao clicar fora da caixa
+            popupPix.addEventListener("click", function(e) {
+                if (e.target === popupPix) {
+                    popupPix.style.display = "none";
+                }
+            });
+        </script>
     </body>
 </hmtl>
