@@ -1,0 +1,139 @@
+body {
+    font-family: "Nunito", Arial, sans-serif;
+    color: #333;
+    
+}
+
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    box-shadow: 0 0 4px #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 380px;
+    overflow: hidden;
+}
+
+#login,
+#cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 2s ease;
+}
+
+.col-40 {
+    width: 40%;
+    padding: 20px 40px;
+}
+
+.col-60 {
+    width: 50%;
+    padding: 40px 20px;
+}
+
+.form-login h3 {
+    text-align: center;
+}
+
+.form-login input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: solid 1px #2D9CDB;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.form-login button {
+    width: 100%;
+    border: solid 1px #2D9CDB;
+    background: #E0E0E0;
+    padding: 10px;
+    border-radius: 200px;
+    cursor: pointer;
+}
+
+.form-login p {
+    font-size: 12px;
+    text-align: center;
+}
+
+/*funcionalidades de monstrar apenas o clique */
+
+#cadastro:target,
+#login:target {
+    transition: all 1s 2s ease;
+}
+
+#cadastro:not(:target),
+#login:not(:target) {
+    opacity: 0;
+    z-index: -2;
+}
+
+#cadastro:target~.mascara {
+    transform: skewX(40deg);
+    left: 60%;
+}
+
+.text-login {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#cadastro .text-login {
+    text-align: right;
+    padding-left: 103px;
+}
+
+.mascara {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #2D9CDB;
+    top: 0;
+    left: -60%;
+    z-index: -1;
+    transform: skewX(-40deg);
+    transition: all 1s 1s ease;
+}
+
+@media (max-width: 800px) {
+
+    .container {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .left-side::after {
+        display: none;
+    }
+
+    .left-side,
+    .right-side {
+        padding: 20px;
+        text-align: center;
+    }
+}
+@media (max-width: 900px){ 
+
+    #cadastro .text-login h2 {
+        white-space: nowrap;
+        margin-top: -30px;
+        text-align: end;
+    }
+
+    #cadastro .text-login h4 {
+        padding-right: 5px;
+        margin-top: -10px;
+        text-align: end;
+    }
+}

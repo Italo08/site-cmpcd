@@ -27,13 +27,13 @@
                         <li><a href="#Quemsomos">Quem somos</a></li>
                         <li><a href="#Iniciativas">Iniciativas</a></li>
                         <li><a href="#Notícías">Notícías</a></li>
-                        <li class="item-apoie"><a href="#login" class="btn-apoie">Login</a></li>
+                        <li class="item-apoie"><a href="../html/cadastro.html" class="btn-apoie">Login</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <h1 class="introducao">Transformando realidades,unindo forças<br>por uma cidade mais inclusiva.</h1>
+        <h1 class="introducao">Transformando realidades, unindo forças<br>por uma cidade mais inclusiva.</h1>
 
         <section class="quemsomos" id="Quemsomos">
             <div class="quemsomos-info">
@@ -176,7 +176,7 @@
             const closePopup = document.getElementById("close-popup");
         
             btnPix.addEventListener("click", function(event) {
-                event.preventDefault(); // impede enviar o form
+                event.preventDefault(); 
                 popupPix.style.display = "flex";
             });
         
@@ -184,7 +184,6 @@
                 popupPix.style.display = "none";
             });
         
-            // fecha ao clicar fora da caixa
             popupPix.addEventListener("click", function(e) {
                 if (e.target === popupPix) {
                     popupPix.style.display = "none";

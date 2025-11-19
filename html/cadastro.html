@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<hmtl lang="pt-BR">
+
+    <head>
+        <title>Login/Cadastro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="../CSS/cadastro.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div id="login">
+                <div class="col-40 text-login">
+                    <h2>Bem vindo!</h2>
+                    <h4>Informe o seu usuário e senha para acessar.</h4>
+                </div>
+                <div class="col-60 form-login">
+                    <h3>Login</h3>
+                    <form class="form-login">
+                        <input type="email" name="email" placeholder="Seu E-mail">
+                        <input type="password" name="senha" placeholder="Sua Senha" required>
+                        <button name="Logar">Acessar</button>
+                        <p>Não tem cadastro ainda? <a href="#cadastro">Cadastre-se aqui</a></p>
+                        <p>voltar para a <a href="../html/index.html">pagina principal</a></p>
+                    </form>
+                </div>
+            </div>
+            <div id="cadastro">
+                <div class="col-60 form-login">
+                    <h3>Cadastre-se</h3>
+                    <form class="form-login">
+                        <input type="text" name="Nome" placeholder="Seu Nome" required>
+                        <input type="text" name="Telefone" placeholder="Seu Telefone" required>
+                        <input type="email" name="email" placeholder="Seu E-mail" required>
+                        <input type="password" name="senha" placeholder="Crie uma senha" required>
+                        <button name="cadastrar">Cadastrar</button>
+                        <p>Já tem cadastro? <a href="#login">Acesse clicando aqui</a></p>
+                    </form>
+                </div>
+                <div class="col-40 text-login">
+                    <h2>Cadastre-se!</h2>
+                    <h4>Complete seu cadastro:</h4>
+                </div>
+            </div>
+            <div class="mascara"></div>
+        </div>
+
+        <script type="text/javascript">
+            location.href = "#login"
+        </script>
+    </body>
+</hmtl>
