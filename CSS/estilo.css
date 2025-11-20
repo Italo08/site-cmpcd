@@ -33,75 +33,97 @@ img {
     box-sizing: border-box;
 }
 
-/*MENU E NAVEGACAO*/
+/* header */
 .menu-bg {
     background: #2D9CDB;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 .menu {
-    max-width: 960px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 15px 0;
+    padding: 25px 20px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.superinfo p,
-.superinfo a {
-    margin: 0 10px 10px 10px;
-}
-
-.superinfo-bg a,
-p {
-    color: white;
-}
-
-.menu a {
-    color: white;
+/* logo e titulo */
+.menu-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .menu-logo a {
-    font-size: 2.25em;
-    font-weight: bold;
-    margin: 0 10px;
+    font-size: 2.3em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: white;
 }
 
+.menu-logo p {
+    font-size: 0.95em;
+    line-height: 1.2;
+    color: white;
+    margin-left: 2px;
+}
+
+/* menu */
 .menu-nav ul {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
 }
 
 .menu-nav a {
-    font-size: 1.25em;
-    display: block;
-    padding: 10px;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: background .2s ease;
 }
 
 .menu-nav a:hover {
-    color: #333333;
+    background: rgba(255, 255, 255, 0.22);
 }
 
-/*BOTAO DE APOIO*/
-.btn-apoie {
+/* login / botao */
+.item-apoie .btn-apoie {
     background: #56CCF2;
-    color: white;
     padding: 10px 20px;
-    display: inline-block;
-    border-radius: 4px;
-    font-size: 1.25em;
-    font-weight: bold;
-    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: .25s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-.btn-apoie:hover {
-    background: #56CCF2;
-    color: white;
-    transform: scale(1.05);
+.item-apoie .btn-apoie:hover {
+    background: #2D9CDB;
+    transform: scale(1.06);
 }
 
-/*INTRODUÇÃO*/
+/* responsivo */
+@media (max-width: 750px) {
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .menu-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-nav a {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+
+/*introduçao*/
 .introducao {
     font-size: 3em;
     line-height: 1;
@@ -111,7 +133,7 @@ p {
     color: #333333;
 }
 
-/*SOBRE*/
+/*sobre*/
 .quemsomos {
 
     border-top: 2px solid #2D9CDB;
@@ -139,7 +161,7 @@ p {
     line-height: 1.4;
     margin-bottom: 1em;
     color: #333333;
-    text-align: left;
+    text-align: left, justify;
 }
 
 .sobre-img {
@@ -147,7 +169,7 @@ p {
     margin: 0 10px;
 }
 
-/*INICIATIVAS*/
+/*iniciativas*/
 .iniciativas {
     max-width: 960px;
     margin: 60px auto;
@@ -190,7 +212,7 @@ p {
     border-top: 8px solid #2D9CDB;
 }
 
-/*NOTICIAS*/
+/*noticias*/
 .noticias {
     background: #E0E0E0;
     padding: 60px;
@@ -224,7 +246,7 @@ p {
     color: #333333;
 }
 
-/*APOIADOR*/
+/*apoiador*/
 .apoiador {
     max-width: 960px;
     margin: 60px auto;
@@ -276,7 +298,7 @@ p {
     border-radius: 2px;
 }
 
-/*APOIO E DOAÇÃO*/
+/*apoio e doaçao*/
 .apoio-doacao {
     background: #E0E0E0;
     padding: 60px 20px;
@@ -354,8 +376,10 @@ p {
 }
 
 .btn-pix {
-    background: #2D9CDB;
-    color: white;
+    background: #56CCF2;
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
     padding: 10px 20px;
     margin: 5px;
     display: inline-block;
@@ -413,7 +437,7 @@ input:focus {
 
 .popup-box h2 {
     margin-bottom: 15px;
-    color: #2D9CDB;
+    color: #333333;
 }
 
 .popup-box p {
@@ -461,6 +485,21 @@ input:focus {
 
 /* Quem faz parte*/
 
+.titulo {
+    text-align: center;
+    font-size: 2.45em;
+}
+
+.titulo::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #2D9CDB;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
 .membros-container {
     max-width: 960px;
     margin: 60px auto;
@@ -475,12 +514,12 @@ input:focus {
     background: #fff;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px #33333367;
 }
 
 
 .texto-card h2 {
-    font-size: 2em;
+    font-size: 1.45em;
     color: #333333;
     margin-bottom: 15px;
 }

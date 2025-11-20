@@ -1,8 +1,8 @@
 body {
-    background: radial-gradient(circle at center, #45B5FF 0%, #1F7EB6 40%, #0F4D73 100%);
+   background: linear-gradient(135deg, #e9e4ff 0%, #d0d8ff 50%, #b4c7ff 100%);
     background-attachment: fixed;
     font-family: "Nunito", Arial, sans-serif;
-    color: #333;
+    color: #333333;
 }
 
 .container {

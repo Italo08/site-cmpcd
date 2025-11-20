@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: "Nunito", sans-serif;
@@ -17,79 +18,102 @@
             min-height: 100vh;
         }
 
+        /* header */
         .menu-bg {
             background: #2D9CDB;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
         }
 
         .menu {
-            max-width: 960px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 15px 0;
+            padding: 25px 20px;
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
         }
 
-        .superinfo p,
-        .superinfo a {
-            margin: 0 10px 10px 10px;
-        }
-
-        .superinfo-bg a,
-        p {
-            color: white;
-        }
-
-        .menu a {
-            color: white;
+        /* logo e titulo */
+        .menu-logo {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
 
         .menu-logo a {
-            font-size: 2.25em;
-            font-weight: bold;
-            margin: 0 10px;
+            font-size: 2.3em;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: white;
         }
 
+        .menu-logo p {
+            font-size: 0.95em;
+            line-height: 1.2;
+            color: white;
+            margin-left: 2px;
+        }
+
+        /* menu */
         .menu-nav ul {
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
         }
 
         .menu-nav a {
-            font-size: 1.25em;
-            display: block;
-            padding: 10px;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 16px;
+            border-radius: 6px;
+            transition: background .2s ease;
         }
 
         .menu-nav a:hover {
-            color: #333333;
+            background: rgba(255, 255, 255, 0.22);
         }
 
-        /*BOTAO DE APOIO*/
-        .btn-apoie {
+        /* botao login */
+        .item-apoie .btn-apoie {
             background: #56CCF2;
-            color: white;
             padding: 10px 20px;
-            display: inline-block;
-            border-radius: 4px;
-            font-size: 1.25em;
-            font-weight: bold;
-            transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: .25s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
         }
 
-        .btn-apoie:hover {
-            background: #56CCF2;
-            color: white;
-            transform: scale(1.05);
+        .item-apoie .btn-apoie:hover {
+            background: #2D9CDB;
+            transform: scale(1.06);
         }
+
+        /* responsivo menu */
+        @media (max-width: 750px) {
+            .menu {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .menu-nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .menu-nav a {
+                width: 100%;
+                padding: 12px;
+            }
+        }
+
 
         .equipe-container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 40px 20px;
             text-align: center;
-            box-shadow: #2d9cdb;
+            box-shadow: #333333;
         }
 
         h1 {
@@ -109,10 +133,10 @@
         }
 
         .card {
-            background: #fff;
+            background: #dddcdcab;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px #3333335e;
             max-width: 400px;
             margin: 0 auto;
         }
@@ -161,15 +185,14 @@
             border-radius: 50px;
             background: #56CCF2;
             text-decoration: none;
-            color: #fff;
+            color: #333333;
             transition: 0.3s;
             font-weight: bold;
         }
 
         .links a:hover {
-            background: #56CCF2;
-            color: #333333;
-            transform: scale(1.05);
+            background: #2D9CDB;
+            transform: scale(1.06);
         }
 
         ul {
@@ -184,7 +207,7 @@
             box-sizing: border-box;
         }
 
-        /* FOOTER */
+        /* footer */
         .footer {
             background: #2D9CDB;
             padding: 40px 20px;
@@ -235,9 +258,8 @@
             <nav class="menu-nav">
                 <ul>
                     <li><a href="../html/index.html">Home</a></li>
-                    <li><a href="../html/equipe.html">Equipe</a></li>
-                    <li><a href="../html/quemfazparte.html">Quem faz parte</a></li>
-                    <li><a href="#Notícías">Notícías</a></li>
+                    <li><a href="../html/quemfazparte.html">Membros do Conselho</a></li>
+                    <li><a href="../html/equipe.html">Sobre o Desenvolvedor</a></li>
                     <li class="item-apoie"><a href="../html/cadastro.html" class="btn-apoie">Login</a></li>
                 </ul>
             </nav>
@@ -245,7 +267,7 @@
     </header>
 
     <div class="equipe-container">
-        <h1>Quem Fez Este Site:</h1>
+        <h1>Desenvolvido por:</h1>
 
         <div class="card">
             <img src="../imgs/img/italo.jpg" alt="Foto italo">
