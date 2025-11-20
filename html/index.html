@@ -23,9 +23,9 @@
                 </div>
                 <nav class="menu-nav">
                     <ul>
+                        <li><a href="../html/index.html">Home</a></li>
                         <li><a href="../html/equipe.html">Equipe</a></li>
-                        <li><a href="#Quemsomos">Quem somos</a></li>
-                        <li><a href="#Iniciativas">Iniciativas</a></li>
+                        <li><a href="../html/quemfazparte.html">Quem faz parte</a></li>
                         <li><a href="#Notícías">Notícías</a></li>
                         <li class="item-apoie"><a href="../html/cadastro.html" class="btn-apoie">Login</a></li>
                     </ul>
@@ -38,19 +38,20 @@
         <section class="quemsomos" id="Quemsomos">
             <div class="quemsomos-info">
                 <h1>Quem somos</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores facilis culpa nostrum sequi,
-                    repudiandae consectetur, quo dolorum ipsa sint molestiae in! Porro commodi delectus fugiat
-                    consequatur dolor placeat, necessitatibus minus.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt laudantium voluptate quos at omnis sint
-                    fuga neque dicta eos enim illum qui cupiditate quod, praesentium cumque vero, eius recusandae
-                    aspernatur!</p>
+                <p>O Conselho Municipal da Pessoa com Deficiência (CMPCD) é um órgão superior de deliberação colegiada,
+                    criado para acompanhar e avaliar o desenvolvimento de uma política municipal para inclusão da pessoa
+                    com deficiência e das políticas setoriais de educação, saúde, trabalho, assistência social,
+                    transporte, cultura, turismo, desporto, lazer e política urbana dirigidos a esse grupo social. O
+                    CMPCD faz parte da estrutura básica Secretaria Municipal de Assistência e Desenvolvimento Social.
+                </p>
+                <p>O CMPCD foi criado no âmbito do Gabinete do Prefeito, em 28 de fevereiro de 2003, através da Lei
+                    Municipal nº 3.751/2003, alterada pela Lei n.º 4.865, de 10/12/2013, que dispõe sobre a composição
+                    do Conselho Municipal da Pessoa com Deficiência.</p>
             </div>
             <div class="sobre-img">
                 <img src="../imgs/img/grande.jpg" alt="Sobre 1">
             </div>
-            <div class="sobre-img">
-                <img src="../imgs/img/lateral.jpg" alt="Sobre 2">
-            </div>
+
         </section>
 
         <section class="iniciativas" id="Iniciativas">
@@ -74,18 +75,14 @@
         <section class="noticias" id="Notícías">
             <div class="noticias-item">
                 <h2>Notícías</h2>
-                <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In reprehenderit necessitatibus,
-                    repellendus quasi dolore accusantium voluptatibus modi cum ea maiores eveniet, magni ipsa mollitia
-                    laudantium quibusdam aliquid veritatis nihil assumenda! Lorem, ipsum dolor sit amet consectetur
-                    adipisicing lit. Eligendi velit sequi qui odio ipsam doloribus eveniet eius porro, voluptatibus
-                    facilis odit ex nisi, quam labore. Quos minima fugit vero tenetur? Lorem ipsum dolor sit, amet
-                    consectetur adipisicing elit. Architecto asperiores, delectus cumque at doloribus quo nostrum
-                    aspernatur beatae dolor expedita aut odio amet facilis et, minus harum error ullam reprehenderit?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores ullam commodi facere facilis quo
-                    accusamus repudiandae perferendis aspernatur qui quam odit culpa harum laboriosam molestias
-                    similique architecto, veritatis fugiat! Vitae!</P>
+                <P><strong>Reuniões ordinárias do Conselho:</strong> Toda 4ª quarta-feira do mês corrente, com início
+                    previsto para as
+                    9h.
+                    Local: Realização itinerante, sendo divulgada pelo Conselho com quinze dias de antecedência através
+                    do Jornal Oficial do Município.</P>
             </div>
         </section>
+
         <section class="motivos">
             <h2>Por que nos apoiar:</h2>
         </section>
@@ -131,8 +128,8 @@
                     <div class="apoio-item">
                         <h3>💰 Doações via PIX</h3>
                         <form class="form-pix">
-                            <input type="text" placeholder="Seu nome"> 
-                            <input type="text" placeholder="Seu telefone"> 
+                            <input type="text" placeholder="Seu nome">
+                            <input type="text" placeholder="Seu telefone">
                             <button class="btn-pix">Fazer pix</button>
                         </form>
                     </div>
@@ -151,7 +148,7 @@
                     <div class="apoio-item">
                         <h3>📦 Doações presenciais</h3>
                         <p>Leve sua doação até a prefeitura:</p>
-                        <p>📍 R. Paissandú, 444 - Centro, Jaú - SP</p>
+                        <p>📍 Rua Aristides Lobo Sobrinho, nº 174, Chácara Braz Miraglia - Jahu/SP</p>
                     </div>
 
                     <div class="apoio-item">
@@ -164,27 +161,34 @@
         </section>
 
         <footer class="footer">
-            <p>Conselho municipal dos direitos da pessoa com Deficiência © todos os direitos reservados</p>
+            <div class="footer-container">
+                <h3>CMPCD – Jaú/SP</h3>
+                <p>Conselho Municipal dos Direitos da Pessoa com Deficiência</p>
+
+                <div class="footer-divider"></div>
+
+                <p class="footer-copy">© 2025 Todos os direitos reservados</p>
+            </div>
         </footer>
 
 
 
-        
+
         <script>
             const btnPix = document.querySelector(".btn-pix");
             const popupPix = document.getElementById("popup-pix");
             const closePopup = document.getElementById("close-popup");
-        
-            btnPix.addEventListener("click", function(event) {
-                event.preventDefault(); 
+
+            btnPix.addEventListener("click", function (event) {
+                event.preventDefault();
                 popupPix.style.display = "flex";
             });
-        
-            closePopup.addEventListener("click", function() {
+
+            closePopup.addEventListener("click", function () {
                 popupPix.style.display = "none";
             });
-        
-            popupPix.addEventListener("click", function(e) {
+
+            popupPix.addEventListener("click", function (e) {
                 if (e.target === popupPix) {
                     popupPix.style.display = "none";
                 }

@@ -12,9 +12,76 @@
         body {
             font-family: "Nunito", sans-serif;
             margin: 0;
-            background: radial-gradient(circle at top, #45B5FF 0%, #1F7EB6 40%, #0F4D73 100%);
+            background: #F9F7F1;
             background-attachment: fixed;
             min-height: 100vh;
+        }
+
+        .menu-bg {
+            background: #2D9CDB;
+        }
+
+        .menu {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .superinfo p,
+        .superinfo a {
+            margin: 0 10px 10px 10px;
+        }
+
+        .superinfo-bg a,
+        p {
+            color: white;
+        }
+
+        .menu a {
+            color: white;
+        }
+
+        .menu-logo a {
+            font-size: 2.25em;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .menu-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .menu-nav a {
+            font-size: 1.25em;
+            display: block;
+            padding: 10px;
+        }
+
+        .menu-nav a:hover {
+            color: #333333;
+        }
+
+        /*BOTAO DE APOIO*/
+        .btn-apoie {
+            background: #56CCF2;
+            color: white;
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 4px;
+            font-size: 1.25em;
+            font-weight: bold;
+            transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+        }
+
+        .btn-apoie:hover {
+            background: #56CCF2;
+            color: white;
+            transform: scale(1.05);
         }
 
         .equipe-container {
@@ -26,17 +93,19 @@
         }
 
         h1 {
-            font-size: 36px;
-            color: white;
-            margin-bottom: 10px;
-            text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+            font-size: 45px;
+            color: #333333;
+            margin-bottom: 50px;
         }
 
-        p.subtitle {
-            font-size: 18px;
-            color: white;
-            margin-bottom: 40px;
-            text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+        h1::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #2D9CDB;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
         }
 
         .card {
@@ -82,7 +151,7 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 15px; /* Adicionado para separar dos links sociais */
+            margin-bottom: 15px;
         }
 
         .links a {
@@ -90,50 +159,96 @@
             margin: 0;
             padding: 10px 20px;
             border-radius: 50px;
-            border: 1px solid #2d9cdb;
+            background: #56CCF2;
             text-decoration: none;
-            color: #2d9cdb;
+            color: #fff;
             transition: 0.3s;
             font-weight: bold;
         }
 
         .links a:hover {
-            background: #2d9cdb;
-            color: #fff;
+            background: #56CCF2;
+            color: #333333;
+            transform: scale(1.05);
         }
 
-        .voltar-container {
-            text-align: center;
-            margin-top: 10px;
-            margin-left: 20px;
+        ul {
+            list-style: none;
         }
 
-        .btn-voltar {
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 50px;
-            border: 1px solid #2d9cdb;
+        a {
             text-decoration: none;
-            color: #2d9cdb;
-            transition: 0.3s;
-            font-weight: bold;
         }
 
-        .btn-voltar:hover {
-            background: #2d9cdb;
-            color: #fff;
+        * {
+            box-sizing: border-box;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #2D9CDB;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-container h3 {
+            color: white;
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .footer-container p {
+            color: white;
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+
+        .footer-divider {
+            width: 80%;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.4);
+            margin: 25px auto;
+            border-radius: 10px;
+        }
+
+        .footer-copy {
+            font-size: 1em;
+            opacity: 0.8;
         }
     </style>
 </head>
 
 <body>
+    <header class="menu-bg">
+        <div class="menu">
+            <div class="menu-logo">
+                <a href="#">CMPCD</a>
+                <p>Conselho municipal dos<br>Direitos da pessoa com Deficiência</p>
+            </div>
+            <nav class="menu-nav">
+                <ul>
+                    <li><a href="../html/index.html">Home</a></li>
+                    <li><a href="../html/equipe.html">Equipe</a></li>
+                    <li><a href="../html/quemfazparte.html">Quem faz parte</a></li>
+                    <li><a href="#Notícías">Notícías</a></li>
+                    <li class="item-apoie"><a href="../html/cadastro.html" class="btn-apoie">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <div class="equipe-container">
-        <h1>Quem Fez Este Site</h1>
-        <p class="subtitle">Conheça o desenvolvedor responsável pelo projeto</p>
+        <h1>Quem Fez Este Site:</h1>
 
         <div class="card">
-            <img src="../imgs/italo.jpg" alt="Foto italo">
+            <img src="../imgs/img/italo.jpg" alt="Foto italo">
             <h2>Italo luiz Mezencio Coutinho</h2>
             <h3>Desenvolvedor Web / Front-end</h3>
             <p>
@@ -147,12 +262,20 @@
                 <a href="https://www.linkedin.com/in/italoluizcoutinho/" target="_blank">LinkedIn</a>
                 <a href="https://github.com/Italo08" target="_blank">GitHub</a>
             </div>
-
-            <div class="voltar-container">
-                <a href="../html/index.html" class="btn-voltar">Voltar</a>
-            </div>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <h3>CMPCD – Jaú/SP</h3>
+            <p>Conselho Municipal dos Direitos da Pessoa com Deficiência</p>
+
+            <div class="footer-divider"></div>
+
+            <p class="footer-copy">© 2025 Todos os direitos reservados</p>
+        </div>
+    </footer>
+
 
 </body>
 
