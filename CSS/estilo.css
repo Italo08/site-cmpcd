@@ -184,7 +184,7 @@ img {
 .iniciativas-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .iniciativas-item {
